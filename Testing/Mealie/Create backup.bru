@@ -1,0 +1,15 @@
+meta {
+  name: Create backup
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://{{mealie-domain}}/api/admin/backups
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{mealie-key}}
+}

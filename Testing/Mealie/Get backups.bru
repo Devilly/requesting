@@ -1,0 +1,15 @@
+meta {
+  name: Get backups
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{mealie-domain}}/api/admin/backups
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{mealie-key}}
+}

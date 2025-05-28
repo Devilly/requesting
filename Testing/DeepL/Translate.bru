@@ -1,0 +1,28 @@
+meta {
+  name: Translate
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://api-free.deepl.com/v2/translate
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: DeepL-Auth-Key {{deepl-key}}
+}
+
+body:json {
+  {
+    "text": ["{{input}}"],
+    "target_lang": "{{target-language}}"
+  }
+}
+
+vars:pre-request {
+  input: this is a test text
+  target-language: NL
+}

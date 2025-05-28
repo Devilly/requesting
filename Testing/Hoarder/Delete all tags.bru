@@ -1,0 +1,15 @@
+meta {
+  name: Delete all tags
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{hoarder-domain}}/api/v1/tags
+  body: none
+  auth: none
+}
+
+headers {
+  authorization: Bearer {{hoarder-key}}
+}
